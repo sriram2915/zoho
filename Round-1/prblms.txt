@@ -1,0 +1,302 @@
+1.Raveena has a list of integers representing her daily profits and losses from a series of investments over n days. Some days she makes a profit (positive numbers), and other days she incurs a loss (negative numbers). Raveena wants to find out the maximum profit she can achieve by selecting a continuous subsequence of days.
+
+Write a program that takes the number of days n as input, followed by a list of n integers representing Raveena's daily profits and losses. Your task is to find the maximum possible profit that can be achieved from any continuous subsequence of these days and print that profit. Additionally, print the subsequence of days that gives this maximum profit.
+
+You must use pointer arithmetic to traverse the list of integers and perform the required operations.
+
+For example, in an array [ −2, 1, −3, 4, −1, 2, 1, −5, 4], the contiguous subarray [4, −1, 2, 1] has the largest sum, which is 6.
+
+Input format :
+The first line contains an integer N, the number of days.
+
+The second line contains N space-separated integers, each representing the profit or loss on that day.
+
+Output format :
+The first line should contain the maximum profit that Raveena can achieve.
+
+The second line should contain the continuous subsequence of days (as integers) that contributes to this maximum profit.
+Refer to the sample output for the formatting specifications.
+
+Code constraints :
+1 ≤ N ≤ 100
+
+Sample test cases :
+Input 1 :
+9
+-2 1 -3 4 -1 2 1 -5 4
+Output 1 :
+6
+4 -1 2 1 
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+2.Harsh is developing a new feature for his text editing app that generates all possible permutations of any given string and its substrings, using each character multiple times. The output must be alphabetically sorted to help writers explore various textual combinations for creative inspiration.
+
+Note: The characters within the sub-string can be repeated.
+
+Example
+
+Input:
+
+ABC
+
+﻿Output:
+
+AAA AAB AAC ABA ABB ABC ACA ACB ACC BAA BAB BAC BBA BBB BBC BCA BCB BCC CAA CAB CAC CBA CBB CBC CCA CCB CCC 
+
+Input format :
+The input consists of a string.
+
+Output format :
+The output prints the list of permuted strings, separated by a space.
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+The input consists of uppercase characters and a maximum length of 4 characters.
+
+Sample test cases :
+Input 1 :
+BD
+Output 1 :
+BB BD DB DD 
+Input 2 :
+ABC
+Output 2 :
+AAA AAB AAC ABA ABB ABC ACA ACB ACC BAA BAB BAC BBA BBB BBC BCA BCB BCC CAA CAB CAC CBA CBB CBC CCA CCB CCC 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+3.knapsack algorithm
+
+ Given the weights and profits of N items, in the form of {weight, profit} put these items in a knapsack
+of capacity W to get the maximum total profit in the knapsack. 
+In Fractional Knapsack, we can break items for maximizing the total value of the knapsack.
+
+Input: arr[] = {{10, 60}, {20, 100}, {30, 120}}, W = 50
+Output: 240 
+Explanation: By taking items of weight 10 and 20 kg and 2/3 fraction of 30 kg. 
+Hence total price will be 60+100+(2/3)(120) = 240
+
+Input:  arr[] = {{30, 500}}, W = 10
+Output: 166.667
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+4.Sort numbers based on weight
+
+Given a set of N numbers and the rules provided below to calculate their weights, the program must sort the numbers based on their weight and print the numbers in descending order.
+Rules to calculate weight:
+    - 5 if a perfect square
+    - 4 if multiple of 4 and divisible by 6
+    - 3 if even number
+Input Format:
+The first line contains the value of N.
+The next N lines contain the value of N numbers.
+Boundary Conditions:
+The length of the array of numbers will be from 3 to 200.
+1 <= N <= 20
+Output Format:
+N lines containing the sorted numbers based on their weight.
+
+Example Input/Output 1:
+Input:
+5
+10
+36
+54
+49
+12
+
+Output:
+36
+12
+49
+54
+10
+Explanation:
+10's weight = 3 for just being an even number.
+36's weight = 5+4+3 = 12 (as it is a perfect square of 6, multiple of 4 and divisible by 6 and also it is an even number)
+54's weight = 3 for just being an even number
+49's weight = 5 (as it is a perfect square of 7)
+12's weight = 4+3 = 7 (multiple of 4 and divisible by 6 and also it is an even number)
+In this 10 and 54 have same weight which is 3. Between them 54 is larger. So it is printed first.
+ 
+
+Example Input/Output 2:
+Input:
+4
+89
+81
+72
+99
+Output:
+72
+81
+99
+89
+Explanation:
+89's weight = 0
+81's weight = 5 (for just being a perfect square)
+72's weight = 4+3 = 7 (multiple of 4 and divisible by 6 and also it is an even number)
+99's weight = 0
+As 99 is greater than 89, 99 is printed first.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+5.Ravi, the operations manager at a private bank, is facing issues with customers reporting problems with credit card transactions. To help him validate the authenticity of the credit card numbers provided, he needs a program that checks whether the card numbers meet the required criteria for specific card types. Ravi needs to identify valid card numbers based on their prefix, length, and checksum validation.﻿
+
+Input format :
+The first line of input consists of a long integer, representing the credit card number.
+
+Output format :
+The output will print either "<credit_card_number> is valid " if the card number is valid or "<credit_card_number> is invalid" if it is invalid.
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+13 ≤ length of the card number ≤ 16.
+
+The card number must start with:
+
+4 for Visa cards.
+
+5 for MasterCard.
+
+37 for American Express cards.
+
+6 for Discover cards.
+
+The card number must pass a checksum validation based on the Luhn algorithm.
+
+Sample test cases :
+Input 1 :
+379354508162306
+Output 1 :
+379354508162306 is valid
+Input 2 :
+4388576018402626
+Output 2 :
+4388576018402626 is invalid
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+6.Lucarnos Film Festival is an annual film festival and is also known for being a prestigious platform for art house films. This year at the Locarno Film Festival there are many movies to be screened, each of different genres, ranging from dramas to comedies and teen movies to horror ones. The festival is a long-running event this time as the organizers are planning to screen only one movie per day. The organizers have populated their schedule in the form of a matrix, where 'i' is the movie number and 'j' is the day number. Eij is the movie preference date.
+
+
+
+You are given a matrix E of N rows and M columns, where Eij is 1 if the ith movie is to be screened on a jth day; otherwise, it will be 0. Note that it is not necessary that if a movie x will be screened on day y, then day y should screen only movie x.
+
+
+
+You know that if there are two different movies x and y that are to be screened on the same day z, then there will be a collision. Can you calculate the number of different collisions at this movie festival? Note that the order of the movies in the collision doesn't matter.
+
+Input format :
+The first line contains two integers N and M, separated by a space, representing the number of movies and the number of days.
+
+The next N lines contain M space-separated integers. The jth integer on the ith line represents the preference date of the ith movie on the jth day. It will be either 0 or 1.
+
+Output format :
+The output displays the number of collisions at the film festival.
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+1 ≤ N ≤ 100 (number of movies)
+
+1 ≤ M ≤ 100 (number of days)
+
+Eij is either 0 or 1
+
+Sample test cases :
+Input 1 :
+4 3
+1 1 1
+1 0 0
+1 1 0
+0 0 0
+Output 1 :
+4
+Input 2 :
+2 2
+1 0
+0 1
+Output 2 :
+0
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+7.	Ben is designing a GPS navigation app. Users want to avoid areas with water bodies like lakes and rivers when planning a route. Write a program for Ben to analyze a map grid where 0 represents water and 1 represents land to identify regions to avoid, find the perimeters of lakes, and then incorporate this information into route planning to avoid these areas.
+
+
+
+Example
+
+
+
+Input:
+
+4 4
+
+0 1 0 0
+
+1 1 1 0
+
+0 1 0 0
+
+1 1 0 1
+
+
+
+Output: Perimeter of the island: 20
+
+
+
+Explanation
+
+Cells contributing: (0,1), (1,0), (1,1), (1,2), (2,1), (3,0), (3,1), (3,3) with respective contributions: 3, 3, 1, 2, 2, 3, 2, 4.
+
+Perimeter calculation: 3 + 3 + 1 + 2 + 2 + 3 + 2 + 4 = 20.
+
+Total perimeter: 20.
+
+Input format :
+The first line contains two integers n and m, the number of rows and columns in the grid.
+
+The next n lines each contain m integers, representing the grid. Each integer is either 0 (water) or 1 (land).
+
+Output format :
+The output prints the perimeter of the island in the format: "Perimeter of the island: X", where X is the calculated perimeter.
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+The maximum grid size is 10x10
+
+Elements in the grid are integers (0 or 1).
+
+Sample test cases :
+Input 1 :
+4 4
+0 1 0 0
+1 1 1 0
+0 1 0 0
+1 1 0 1
+Output 1 :
+Perimeter of the island: 20
+Input 2 :
+3 2
+1 0
+0 0
+0 1
+Output 2 :
+Perimeter of the island: 8
+
+------------------------------------------------------------------------------------------------------------------------------------------------
